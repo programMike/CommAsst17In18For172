@@ -1,0 +1,16 @@
+﻿@*Registration * 10 The second view is called Result and should display the
+    message text from the message object.*@
+
+@*Found code help to complete the assignment as outlined above:
+https://chsakell.com/2013/05/02/4-basic-ways-to-pass-data-from-controller-to-view-in-asp-net-mvc/*@
+@using CommAsst17in18for172.Models
+@model CommAsst17in18for172.Models.Message
+
+@{
+    ViewBag.Title = "Result";
+}
+
+@*Registration * 11 Test the Registration to see if it works.  It works!!!*@
+<h2>Result from registering to participate in the Community Assist Program</h2>
+
+<p>@Model.MessageText</p>

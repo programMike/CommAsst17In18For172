@@ -151,9 +151,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticateController.cs" />
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Models\AuthenticateClient.cs" />
+    <Compile Include="Models\Donate.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -270,6 +272,8 @@
     <Content Include="Views\Registration\Result.cshtml" />
     <Content Include="Views\Authenticate\Index.cshtml" />
     <Content Include="Views\Authenticate\Result.cshtml" />
+    <Content Include="Views\Donation\Result.cshtml" />
+    <Content Include="Views\Donation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

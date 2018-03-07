@@ -152,6 +152,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AuthenticateController.cs" />
     <Compile Include="Controllers\DonationController.cs" />
+    <Compile Include="Controllers\GrantApplicationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Models\AuthenticateClient.cs" />
@@ -274,6 +275,8 @@
     <Content Include="Views\Authenticate\Result.cshtml" />
     <Content Include="Views\Donation\Result.cshtml" />
     <Content Include="Views\Donation\Index.cshtml" />
+    <Content Include="Views\GrantApplications\Index.cshtml" />
+    <Content Include="Views\Shared\Result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

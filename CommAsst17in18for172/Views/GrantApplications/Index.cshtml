@@ -1,0 +1,50 @@
+﻿@model CommAsst17in18for172.Models.GrantApplication
+@{
+    ViewBag.Title = "Index of Grant Applicaiton";
+}
+
+<h2>Index of Grant Applicaiton</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*Create a form on the index View page with the fields you need to get from the
+      user (Grant type, Reason, amount). The grant types should be presented in the
+      form as a drop down list from which the user can choose.*@
+<div class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.Label("Grant Type:")
+            @Html.DropDownList("GrantTypeName", new List<SelectListItem>
+                {
+                    new SelectListItem{ Text="Loan", Value = "Loan" },
+                    new SelectListItem{ Text="Relocation", Value = "Relocation" },
+                    new SelectListItem{ Text="Contribution", Value = "Contribution" },
+                })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.Label("Grant Application Reson:")
+            @Html.EditorFor(model => model.GrantApplicationReason, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.GrantApplicationReason, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            @Html.Label("Grant Application Amout:")
+            @Html.EditorFor(model => model.GrantApplicationRequestAmount, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.GrantApplicationRequestAmount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Apply Grant" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -16,17 +16,13 @@
     <div class="form-group">
         <div class="col-md-10">
             @Html.Label("Grant Type:")
-            @Html.DropDownList("GrantTypeName", new List<SelectListItem>
-                {
-                    new SelectListItem{ Text="Loan", Value = "Loan" },
-                    new SelectListItem{ Text="Relocation", Value = "Relocation" },
-                    new SelectListItem{ Text="Contribution", Value = "Contribution" },
-                })
+            @Html.DropDownList("GrantTypeKey", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.GrantType, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-10">
-            @Html.Label("Grant Application Reson:")
+            @Html.Label("Grant Application Reason:")
             @Html.EditorFor(model => model.GrantApplicationReason, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.GrantApplicationReason, "", new { @class = "text-danger" })
         </div>
